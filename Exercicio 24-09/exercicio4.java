@@ -34,8 +34,9 @@ public class exercicio4 {
 
                 float nota1 = notasAluno[0];
                 float nota2 = notasAluno[1];
-                float media = (nota1 + nota2) / 2;
-                boolean aprovado = media >= 6;
+
+                float media = calcularMedia(nota1, nota2);
+                boolean aprovado = isAprovado(media);
 
                 bw.write("Nome: " + nome + "\n");
                 bw.write("Nota 1: " + nota1 + "\n");
@@ -52,5 +53,13 @@ public class exercicio4 {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private static float calcularMedia(float nota1, float nota2) {
+        return (nota1 + nota2) / 2;
+    }
+
+    private static boolean isAprovado(float media) {
+        return media >= 6;
     }
 }
