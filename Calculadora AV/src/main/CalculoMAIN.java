@@ -8,6 +8,7 @@ public class CalculoMAIN {
 		String linha;
 		int i = 0;
 		CalculoDTO calculoDTO = new CalculoDTO();
+		// Alterar com o caminho do seu arquivo csv
 		File dados = new File("C:\\Users\\leele\\eclipse-workspace\\AtividadeAvaliativaAlexandre\\operacoes.csv");
 		File resultado = new File("C:\\Users\\leele\\eclipse-workspace\\AtividadeAvaliativaAlexandre\\resultado.csv");
 		double resultadoOperacao;
@@ -53,7 +54,7 @@ public class CalculoMAIN {
                 	 continue;
 				}
 				
-				bw.write(calculoDTO.getOperacao() + "," + resultadoOperacao + "\n");
+				bw.write(resultadoOperacao + "\n");
 			}
 			
 			bw.close();
